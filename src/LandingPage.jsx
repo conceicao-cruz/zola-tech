@@ -114,14 +114,16 @@ function LandingPage() {
 
 const styles = {
   container: {
-    minHeight: "100vh",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    position: "relative",
-    fontFamily: "Arial, sans-serif",
-    color: "white",
-  },
+  minHeight: "100vh",
+  width: "100vw",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  position: "relative",
+  fontFamily: "Arial, sans-serif",
+  color: "white",
+  overflowX: "hidden",
+},
 
   overlay: {
     position: "absolute",
@@ -131,15 +133,15 @@ const styles = {
 
   /* HEADER FIX (não centralizado) */
   header: {
-    position: "relative",
-    zIndex: 2,
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "20px 40px",
-    maxWidth: "1200px",
-    margin: "0 auto",
-  },
+  position: "relative",
+  zIndex: 2,
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "20px",
+  width: "100%",
+  boxSizing: "border-box",
+},
 
   logoBox: {
     display: "flex",
@@ -172,15 +174,14 @@ const styles = {
   },
 
   /* MAIN */
-  main: {
-    position: "relative",
-    zIndex: 2,
-    maxWidth: "1000px",
-    margin: "0 auto",
-    padding: "60px 20px 100px",
-    textAlign: "center",
-  },
-
+ main: {
+  position: "relative",
+  zIndex: 2,
+  width: "100%",
+  padding: "60px 20px 100px",
+  textAlign: "center",
+  boxSizing: "border-box",
+},
   title: {
     fontSize: "clamp(34px, 6vw, 64px)",
     color: "#D4AF37",
@@ -189,12 +190,13 @@ const styles = {
   },
 
   subtitle: {
-    fontSize: "16px",
-    color: "#ddd",
-    maxWidth: "750px",
-    margin: "0 auto 50px",
-    lineHeight: "1.8",
-  },
+  fontSize: "16px",
+  color: "#ddd",
+  width: "100%",
+  maxWidth: "750px",
+  margin: "0 auto 50px",
+  lineHeight: "1.8",
+},
 
   /* CARDS VERTICAIS PREMIUM */
   cardsContainer: {
