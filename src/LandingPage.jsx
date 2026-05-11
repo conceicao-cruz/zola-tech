@@ -63,8 +63,7 @@ function LandingPage() {
             <h2 style={styles.cardTitle}>O que é a Zola Tech?</h2>
             <div style={styles.line}></div>
             <p style={styles.cardText}>
-              É uma plataforma de aprendizagem moderna que organiza conteúdos
-              de tecnologia de forma simples, prática e acessível.
+              Plataforma de aprendizagem moderna e simples.
             </p>
           </div>
 
@@ -72,8 +71,7 @@ function LandingPage() {
             <h2 style={styles.cardTitle}>Como funciona?</h2>
             <div style={styles.line}></div>
             <p style={styles.cardText}>
-              O utilizador escolhe um caminho e recebe conteúdos organizados,
-              exercícios práticos e evolução contínua.
+              Conteúdos organizados + prática + evolução contínua.
             </p>
           </div>
 
@@ -81,7 +79,7 @@ function LandingPage() {
             <h2 style={styles.cardTitle}>Para quem é?</h2>
             <div style={styles.line}></div>
             <p style={styles.cardText}>
-              Para iniciantes e também para quem quer melhorar habilidades em tecnologia.
+              Iniciantes e pessoas que querem melhorar em tecnologia.
             </p>
           </div>
         </div>
@@ -104,14 +102,9 @@ function LandingPage() {
 
 const styles = {
   container: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-
+    position: "relative",
+    minHeight: "100vh",
     width: "100%",
-    height: "100%",
 
     backgroundSize: "cover",
     backgroundPosition: "center",
