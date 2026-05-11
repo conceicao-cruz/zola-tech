@@ -114,17 +114,16 @@ function LandingPage() {
 
 const styles = {
   container: {
-  minHeight: "100vh",
-  width: "100vw",
+  position: "fixed",
+  inset: 0,
+  width: "100%",
+  height: "100%",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  position: "relative",
   fontFamily: "Arial, sans-serif",
   color: "white",
-  overflowX: "hidden",
-},
-
+}
   overlay: {
     position: "absolute",
     inset: 0,
