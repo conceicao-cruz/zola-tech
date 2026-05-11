@@ -115,15 +115,23 @@ function LandingPage() {
 const styles = {
   container: {
   position: "fixed",
-  inset: 0,
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+
   width: "100%",
   height: "100%",
+
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
+
   fontFamily: "Arial, sans-serif",
   color: "white",
-}
+},
+
+overlay: {
   overlay: {
     position: "absolute",
     inset: 0,
@@ -195,8 +203,8 @@ const styles = {
   maxWidth: "750px",
   margin: "0 auto 50px",
   lineHeight: "1.8",
+  padding: "0 10px", // 👈 importante no mobile
 },
-
   /* CARDS VERTICAIS PREMIUM */
   cardsContainer: {
     display: "flex",
