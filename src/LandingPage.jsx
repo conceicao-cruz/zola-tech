@@ -11,7 +11,6 @@ function LandingPage() {
 
   const images = [img1, img2, img3];
   const [index, setIndex] = useState(0);
-
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -50,9 +49,7 @@ function LandingPage() {
 
       {/* MAIN */}
       <main style={styles.main}>
-        <h1 style={styles.title}>
-          Aprenda Tecnologia de Forma Moderna
-        </h1>
+        <h1 style={styles.title}>Aprenda Tecnologia de Forma Moderna</h1>
 
         <p style={styles.subtitle}>
           Uma plataforma digital pensada para quem quer evoluir na tecnologia,
@@ -62,15 +59,12 @@ function LandingPage() {
 
         {/* CARDS */}
         <div style={styles.cardsContainer}>
-
           <div style={{ ...styles.card, opacity: visible ? 1 : 0 }}>
             <h2 style={styles.cardTitle}>O que é a Zola Tech?</h2>
             <div style={styles.line}></div>
             <p style={styles.cardText}>
               É uma plataforma de aprendizagem moderna que organiza conteúdos
-              de tecnologia de forma simples, prática e acessível. O objetivo
-              é ajudar qualquer pessoa a aprender de forma estruturada e sem
-              confusão.
+              de tecnologia de forma simples, prática e acessível.
             </p>
           </div>
 
@@ -78,9 +72,8 @@ function LandingPage() {
             <h2 style={styles.cardTitle}>Como funciona?</h2>
             <div style={styles.line}></div>
             <p style={styles.cardText}>
-              O utilizador escolhe um caminho de aprendizagem e recebe conteúdos
-              organizados, explicações claras, exercícios práticos e uma evolução
-              contínua com base no seu nível.
+              O utilizador escolhe um caminho e recebe conteúdos organizados,
+              exercícios práticos e evolução contínua.
             </p>
           </div>
 
@@ -88,12 +81,9 @@ function LandingPage() {
             <h2 style={styles.cardTitle}>Para quem é?</h2>
             <div style={styles.line}></div>
             <p style={styles.cardText}>
-              Para iniciantes que querem entrar no mundo da tecnologia, e também
-              para pessoas com experiência que procuram reforçar conhecimentos,
-              melhorar habilidades ou encontrar direção nos estudos.
+              Para iniciantes e também para quem quer melhorar habilidades em tecnologia.
             </p>
           </div>
-
         </div>
 
         {/* BOTÃO */}
@@ -114,41 +104,39 @@ function LandingPage() {
 
 const styles = {
   container: {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
 
-  width: "100%",
-  height: "100%",
+    width: "100%",
+    height: "100%",
 
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
 
-  fontFamily: "Arial, sans-serif",
-  color: "white",
-},
+    fontFamily: "Arial, sans-serif",
+    color: "white",
+  },
 
-overlay: {
   overlay: {
     position: "absolute",
     inset: 0,
     background: "rgba(0,0,0,0.78)",
   },
 
-  /* HEADER FIX (não centralizado) */
   header: {
-  position: "relative",
-  zIndex: 2,
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: "20px",
-  width: "100%",
-  boxSizing: "border-box",
-},
+    position: "relative",
+    zIndex: 2,
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "20px",
+    width: "100%",
+    boxSizing: "border-box",
+  },
 
   logoBox: {
     display: "flex",
@@ -180,15 +168,15 @@ overlay: {
     cursor: "pointer",
   },
 
-  /* MAIN */
- main: {
-  position: "relative",
-  zIndex: 2,
-  width: "100%",
-  padding: "60px 20px 100px",
-  textAlign: "center",
-  boxSizing: "border-box",
-},
+  main: {
+    position: "relative",
+    zIndex: 2,
+    width: "100%",
+    padding: "60px 20px 100px",
+    textAlign: "center",
+    boxSizing: "border-box",
+  },
+
   title: {
     fontSize: "clamp(34px, 6vw, 64px)",
     color: "#D4AF37",
@@ -197,15 +185,14 @@ overlay: {
   },
 
   subtitle: {
-  fontSize: "16px",
-  color: "#ddd",
-  width: "100%",
-  maxWidth: "750px",
-  margin: "0 auto 50px",
-  lineHeight: "1.8",
-  padding: "0 10px", // 👈 importante no mobile
-},
-  /* CARDS VERTICAIS PREMIUM */
+    fontSize: "16px",
+    color: "#ddd",
+    maxWidth: "750px",
+    margin: "0 auto 50px",
+    lineHeight: "1.8",
+    padding: "0 10px",
+  },
+
   cardsContainer: {
     display: "flex",
     flexDirection: "column",
@@ -215,13 +202,10 @@ overlay: {
 
   card: {
     background: "rgba(20,20,20,0.70)",
-    padding: "28px",
+    padding: "20px",
     borderRadius: "18px",
-    border: "1px solid rgba(212,175,55,0.15)",
     textAlign: "left",
     backdropFilter: "blur(10px)",
-
-    /* efeito suave */
     transition: "all 0.4s ease",
   },
 
