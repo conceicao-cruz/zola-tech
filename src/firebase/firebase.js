@@ -1,6 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
+import {
+  getAuth,
+  setPersistence,
+  browserLocalPersistence
+} from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDmZ9hzj9bg3De6X6hUJhjWbHaGUI0abBk",
@@ -17,8 +21,17 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-/* 🔥 LOGIN AUTOMÁTICO (tipo Instagram) */
-setPersistence(auth, browserLocalPersistence);
+/* 🔥 LOGIN PERSISTENTE (SEGURO) */
+const enablePersistence = async () => {
+  try {
+    await setPersistence(auth, browserLocalPersistence);
+    console.log("🔥 Persistência ativa (login automático ligado)");
+  } catch (error) {
+    console.error("Erro na persistência:", error);
+  }
+};
+
+enablePersistence();
 
 export { db, auth };
 export default app;
