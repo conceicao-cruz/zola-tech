@@ -13,7 +13,6 @@ function LandingPage() {
   const images = [img1, img2, img3];
   const [index, setIndex] = useState(0);
 
-  // slider automático
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
@@ -22,27 +21,12 @@ function LandingPage() {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  // animações
   const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 30 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } },
-  };
-
-  const stagger = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { duration: 0.9, ease: "easeOut" },
     },
   };
 
@@ -55,7 +39,7 @@ function LandingPage() {
     >
       <div style={styles.overlay} />
 
-      {/* HEADER */}
+      {/* HEADER MINIMALISTA */}
       <motion.header
         style={styles.header}
         initial={{ opacity: 0, y: -20 }}
@@ -75,57 +59,51 @@ function LandingPage() {
         </button>
       </motion.header>
 
-      {/* MAIN */}
+      {/* HERO APPLE STYLE */}
       <motion.main
         style={styles.main}
-        variants={fadeIn}
         initial="hidden"
         animate="show"
+        variants={{
+          show: {
+            transition: { staggerChildren: 0.2 },
+          },
+        }}
       >
-        {/* HERO */}
         <motion.h1 style={styles.title} variants={fadeUp}>
-          Aprenda Tecnologia de Forma Moderna
+          Aprenda Tecnologia de Forma Simples
         </motion.h1>
 
         <motion.p style={styles.subtitle} variants={fadeUp}>
-          Uma plataforma digital pensada para quem quer evoluir na tecnologia,
-          seja iniciante ou alguém que já está no mundo digital.
+          Uma plataforma moderna para quem quer evoluir na tecnologia de forma
+          clara, prática e consistente.
         </motion.p>
 
-        {/* CARDS */}
-        <motion.div
-          style={styles.cardsContainer}
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <motion.div style={styles.card} variants={fadeUp} whileHover={hoverCard}>
-            <h2 style={styles.cardTitle}>O que é a Zola Tech?</h2>
-            <div style={styles.line}></div>
+        {/* CARDS CLEAN */}
+        <div style={styles.cardsContainer}>
+          <motion.div style={styles.card} variants={fadeUp}>
+            <h2 style={styles.cardTitle}>O que é?</h2>
             <p style={styles.cardText}>
-              Plataforma de aprendizagem moderna com conteúdos organizados de forma simples.
+              Plataforma simples para aprender tecnologia passo a passo.
             </p>
           </motion.div>
 
-          <motion.div style={styles.card} variants={fadeUp} whileHover={hoverCard}>
+          <motion.div style={styles.card} variants={fadeUp}>
             <h2 style={styles.cardTitle}>Como funciona?</h2>
-            <div style={styles.line}></div>
             <p style={styles.cardText}>
-              Escolha um caminho e receba conteúdos, exercícios e orientação prática.
+              Conteúdos organizados e orientação prática para evolução contínua.
             </p>
           </motion.div>
 
-          <motion.div style={styles.card} variants={fadeUp} whileHover={hoverCard}>
-            <h2 style={styles.cardTitle}>Para quem é?</h2>
-            <div style={styles.line}></div>
+          <motion.div style={styles.card} variants={fadeUp}>
+            <h2 style={styles.cardTitle}>Para quem?</h2>
             <p style={styles.cardText}>
-              Para iniciantes e pessoas que querem evoluir na tecnologia.
+              Iniciantes e pessoas que querem melhorar suas habilidades tech.
             </p>
           </motion.div>
-        </motion.div>
+        </div>
 
-        {/* BOTÃO PRINCIPAL */}
+        {/* CTA PRINCIPAL */}
         <motion.button
           style={styles.mainButton}
           onClick={() => navigate("/login")}
@@ -135,37 +113,30 @@ function LandingPage() {
           Começar Agora
         </motion.button>
 
-        <p style={styles.bottomText}>
-          Simples. Moderno. Feito para evolução real.
-        </p>
+        <p style={styles.bottomText}>Simples. Limpo. Focado em evolução.</p>
       </motion.main>
     </div>
   );
 }
 
-/* HOVER CARD */
-const hoverCard = {
-  scale: 1.03,
-  boxShadow: "0 15px 40px rgba(0,0,0,0.4)",
-  transition: { duration: 0.3 },
-};
-
-/* STYLES */
+/* ===================== STYLES APPLE ===================== */
 const styles = {
- container: {
-  position: "relative",
-  width: "100%",
-  minHeight: "100vh",
-  margin: 0,
-  padding: 0,
-  overflow: "hidden",
-}
+  container: {
+    position: "relative",
+    width: "100%",
+    minHeight: "100vh",
+    overflowX: "hidden",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    display: "flex",
+    flexDirection: "column",
+  },
 
   overlay: {
     position: "absolute",
     inset: 0,
     background:
-      "radial-gradient(circle, rgba(0,0,0,0.4), rgba(0,0,0,0.92))",
+      "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.92))",
   },
 
   header: {
@@ -174,7 +145,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "15px",
+    padding: "14px 16px",
   },
 
   logoBox: {
@@ -184,99 +155,96 @@ const styles = {
   },
 
   logoImg: {
-    width: "45px",
-    height: "45px",
-    borderRadius: "12px",
-    border: "2px solid #D4AF37",
+    width: "40px",
+    height: "40px",
+    borderRadius: "10px",
   },
 
   logoText: {
     color: "#D4AF37",
-    fontWeight: "bold",
+    fontWeight: "600",
+    fontSize: "14px",
   },
 
   loginButton: {
     background: "#8E44AD",
     color: "#fff",
     border: "none",
-    padding: "10px 15px",
-    borderRadius: "10px",
-    cursor: "pointer",
-    fontWeight: "bold",
+    padding: "10px 14px",
+    borderRadius: "12px",
+    fontWeight: "600",
   },
 
   main: {
     position: "relative",
     zIndex: 2,
     textAlign: "center",
-    padding: "20px",
+    padding: "40px 16px 20px",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "18px",
   },
 
   title: {
-    fontSize: "clamp(28px, 7vw, 60px)",
+    fontSize: "clamp(28px, 7vw, 52px)",
+    fontWeight: "600",
     color: "#D4AF37",
-    marginBottom: "20px",
+    lineHeight: "1.1",
+    letterSpacing: "-1px",
   },
 
   subtitle: {
-    fontSize: "15px",
-    lineHeight: "1.7",
-    maxWidth: "700px",
-    margin: "0 auto 30px",
+    fontSize: "16px",
+    maxWidth: "600px",
     color: "#ddd",
+    lineHeight: "1.6",
   },
 
   cardsContainer: {
     display: "flex",
     flexDirection: "column",
-    gap: "18px",
-    maxWidth: "520px",
-    margin: "0 auto",
+    gap: "14px",
+    width: "100%",
+    maxWidth: "420px",
+    marginTop: "20px",
   },
 
   card: {
-    background: "rgba(20,20,20,0.65)",
-    borderRadius: "18px",
-    padding: "18px",
+    background: "rgba(20,20,20,0.55)",
+    borderRadius: "16px",
+    padding: "16px",
     textAlign: "left",
-    backdropFilter: "blur(12px)",
-    border: "1px solid rgba(212,175,55,0.15)",
+    border: "1px solid rgba(255,255,255,0.08)",
   },
 
   cardTitle: {
     color: "#D4AF37",
-    fontSize: "18px",
-    marginBottom: "8px",
-  },
-
-  line: {
-    width: "50px",
-    height: "2px",
-    background: "#D4AF37",
-    marginBottom: "12px",
+    fontSize: "16px",
+    marginBottom: "6px",
   },
 
   cardText: {
-    fontSize: "14px",
     color: "#ccc",
-    lineHeight: "1.6",
+    fontSize: "14px",
+    lineHeight: "1.5",
   },
 
   mainButton: {
-    marginTop: "25px",
+    marginTop: "20px",
     background: "#8E44AD",
     color: "#fff",
     border: "none",
-    padding: "14px 24px",
-    borderRadius: "12px",
-    cursor: "pointer",
-    fontWeight: "bold",
+    padding: "14px 26px",
+    borderRadius: "14px",
+    fontWeight: "600",
+    fontSize: "16px",
   },
 
   bottomText: {
-    marginTop: "15px",
-    color: "#D4AF37",
+    marginTop: "10px",
     fontSize: "13px",
+    color: "#D4AF37",
   },
 };
 
