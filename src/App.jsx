@@ -33,7 +33,7 @@ function ProtectedRoute({ children }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "#0d0d0d",
+          background: "#3b1b1b",
           color: "white",
         }}
       >

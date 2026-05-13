@@ -138,7 +138,7 @@ const styles = {
 
     position: "relative",
 
-    padding: "20px",
+    padding: "0",
   },
 
   overlay: {

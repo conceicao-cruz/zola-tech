@@ -248,7 +248,7 @@ const styles = {
     padding: "14px 26px",
     borderRadius: "12px",
     fontWeight: "600",
-    fontSize: "16px",
+    fontSize: "16px", 
   },
 
   bottomText: {
