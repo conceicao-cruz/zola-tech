@@ -154,9 +154,9 @@ const hoverCard = {
 const styles = {
   container: {
   position: "relative",
-  width: "100%",
-  minHeight: "100vh",
-  height: "100vh",
+  width: "0",
+  minHeight: "0",
+  height: "0",
   margin: 0,
   padding: 0,
   overflow: "hidden",
