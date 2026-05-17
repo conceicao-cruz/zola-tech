@@ -83,11 +83,11 @@ body {
   object-fit: cover;
   border-radius: 12px;
   border: 2px solid var(--dourado);
-  margin-bottom: 12px;
+  display: block;
+  margin: 0 auto 12px auto;
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
   transition: 0.3s ease;
 }
-
 .zola-logo:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(212, 175, 55, 1);
@@ -167,7 +167,7 @@ body {
 /* LINK */
 .zola-link {
   display: block;
-  margin-top: 30px;
+  margin-top: 12px;
   color: var(--roxo-claro);
   text-decoration: none;
   font-size: 13px;
@@ -185,210 +185,11 @@ body {
   justify-content: center;
 }
 .forgot-link {
+  position: relative;
+  top: 40px;
   display: block;
-  margin-top: 3px;
-}
-
-.zola-card {
+}.zola-card {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-:root {
-  --roxo: #6a0dad;
-  --roxo-claro: #b36bff;
-  --dourado: #d4af37;
-  --preto: #0d0d0d;
-  --texto: #ffffff;
-  --cinza: #b0b0b0;
-}
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Arial", sans-serif;
-}
-
-body {
-  background: radial-gradient(circle at top, #1a0033, #000000);
-  color: var(--texto);
-}
-
-/* CONTAINER */
-.landing-container {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* OVERLAY */
-.landing-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 1;
-}
-
-/* HEADER */
-.landing-header {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 18px;
-  flex-wrap: wrap;
-}
-
-/* LOGO */
-.landing-logoBox {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.landing-logoImg {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  border: 2px solid var(--dourado);
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-}
-
-.landing-logoText {
-  color: var(--dourado);
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-/* BOTÃO LOGIN */
-.landing-loginButton {
-  background: var(--roxo);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s ease;
-  box-shadow: 0 0 15px rgba(106, 13, 173, 0.4);
-}
-
-.landing-loginButton:hover {
-  background: var(--roxo-claro);
-  transform: scale(1.05);
-}
-
-/* MAIN */
-.landing-main {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 25px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-/* TÍTULO */
-.landing-title {
-  font-size: clamp(22px, 5vw, 48px);
-  color: var(--dourado);
-  font-weight: 600;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-}
-
-/* SUBTÍTULO */
-.landing-subtitle {
-  max-width: 700px;
-  color: var(--cinza);
-  font-size: clamp(14px, 2vw, 18px);
-  line-height: 1.6;
-}
-
-/* SEÇÕES */
-.landing-section {
-  margin-top: 25px;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.landing-sectionTitle {
-  color: var(--dourado);
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.landing-sectionText {
-  color: var(--cinza);
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* STEPS */
-.landing-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.landing-stepCard {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 14px;
-  border-radius: 12px;
-  color: white;
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  transition: 0.3s;
-}
-
-.landing-stepCard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-}
-
-/* BOTÃO PRINCIPAL */
-.landing-mainButton {
-  margin-top: 15px;
-  background: linear-gradient(135deg, var(--roxo), var(--dourado));
-  color: white;
-  padding: 14px 22px;
-  border: none;
-  border-radius: 12px;
-  font-size: 16px;
-  width: 100%;
-  max-width: 300px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 0 20px rgba(106, 13, 173, 0.4);
-}
-
-.landing-mainButton:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-}
-
-/* TEXTO FINAL */
-.landing-bottomText {
-  margin-top: 10px;
-  color: var(--dourado);
-  font-size: 13px;
-}
-
-/* FOOTER */
-.landing-footer {
-  text-align: center;
-  padding: 20px;
-  color: var(--cinza);
-  position: relative;
-  z-index: 2;
-  margin-top: 30px;
 }
