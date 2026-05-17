@@ -1,0 +1,394 @@
+:root {
+  --roxo: #6a0dad;
+  --roxo-claro: #b36bff;
+  --dourado: #d4af37;
+  --preto: #0d0d0d;
+  --card: rgba(18, 18, 18, 0.75);
+  --texto: #ffffff;
+  --cinza: #b0b0b0;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a0033, #000000);
+  color: var(--texto);
+}
+
+/* FUNDO */
+.zola-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BRILHO DE FUNDO */
+.zola-container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(106,13,173,0.3), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(60px);
+}
+
+.zola-container::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212,175,55,0.2), transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  filter: blur(60px);
+}
+
+/* CARD */
+.zola-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 18px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 35px rgba(106, 13, 173, 0.25);
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease;
+}
+
+.zola-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 45px rgba(212, 175, 55, 0.25);
+}
+
+/* LOGO */
+.zola-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--dourado);
+  margin-bottom: 12px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+  transition: 0.3s ease;
+}
+
+.zola-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 1);
+}
+
+/* TÍTULO */
+.zola-title {
+  color: var(--dourado);
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* SUBTÍTULO */
+.zola-subtitle {
+  color: var(--cinza);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* INPUT */
+.zola-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(106, 13, 173, 0.5);
+  background: #0c0c0c;
+  color: white;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.zola-input:focus {
+  border-color: var(--dourado);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* BOTÃO PRINCIPAL */
+.zola-btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--roxo), var(--dourado));
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(106, 13, 173, 0.4);
+  transition: 0.3s ease;
+}
+
+.zola-btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.5);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.zola-btn-outline {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--dourado);
+  background: transparent;
+  color: var(--dourado);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.zola-btn-outline:hover {
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* LINK */
+.zola-link {
+  display: block;
+  margin-top: 30px;
+  color: var(--roxo-claro);
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.zola-link:hover {
+  color: var(--dourado);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+.captcha-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+.forgot-link {
+  display: block;
+  margin-top: 3px;
+}
+
+.zola-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+:root {
+  --roxo: #6a0dad;
+  --roxo-claro: #b36bff;
+  --dourado: #d4af37;
+  --preto: #0d0d0d;
+  --texto: #ffffff;
+  --cinza: #b0b0b0;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a0033, #000000);
+  color: var(--texto);
+}
+
+/* CONTAINER */
+.landing-container {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* OVERLAY */
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/* HEADER */
+.landing-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.landing-logoBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.landing-logoImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid var(--dourado);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.landing-logoText {
+  color: var(--dourado);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* BOTÃO LOGIN */
+.landing-loginButton {
+  background: var(--roxo);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(106, 13, 173, 0.4);
+}
+
+.landing-loginButton:hover {
+  background: var(--roxo-claro);
+  transform: scale(1.05);
+}
+
+/* MAIN */
+.landing-main {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 25px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* TÍTULO */
+.landing-title {
+  font-size: clamp(22px, 5vw, 48px);
+  color: var(--dourado);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* SUBTÍTULO */
+.landing-subtitle {
+  max-width: 700px;
+  color: var(--cinza);
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 1.6;
+}
+
+/* SEÇÕES */
+.landing-section {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.landing-sectionTitle {
+  color: var(--dourado);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.landing-sectionText {
+  color: var(--cinza);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* STEPS */
+.landing-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.landing-stepCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 14px;
+  border-radius: 12px;
+  color: white;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: 0.3s;
+}
+
+.landing-stepCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* BOTÃO PRINCIPAL */
+.landing-mainButton {
+  margin-top: 15px;
+  background: linear-gradient(135deg, var(--roxo), var(--dourado));
+  color: white;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(106, 13, 173, 0.4);
+}
+
+.landing-mainButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+}
+
+/* TEXTO FINAL */
+.landing-bottomText {
+  margin-top: 10px;
+  color: var(--dourado);
+  font-size: 13px;
+}
+
+/* FOOTER */
+.landing-footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--cinza);
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+}

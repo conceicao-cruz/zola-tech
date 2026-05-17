@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import ForgotPassword from "./ForgotPassword.jsx";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "./firebase/firebase";
 
@@ -29,7 +29,7 @@ function ProtectedRoute({ children }) {
     return (
       <div
         style={{
-          minHeight: "100vh",
+          minHeight: "100vw",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -56,7 +56,7 @@ export default function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-
+<Route path="/forgot-password" element={<ForgotPassword />} />
       <Route
         path="/dashboard"
         element={

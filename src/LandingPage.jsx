@@ -35,6 +35,7 @@ function LandingPage() {
       style={{
         ...styles.container,
         backgroundImage: `url(${images[index]})`,
+
       }}
     >
       <div style={styles.overlay} />
@@ -162,7 +163,7 @@ function LandingPage() {
 const styles = {
   container: {
     position: "relative",
-    minHeight: "100vh",
+    minHeight: "100vw",
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
